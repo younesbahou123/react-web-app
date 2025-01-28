@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import FoodItem from "./foodItem";
+import FoodItem from "./FoodItem";
 
 const FoodList = ({ addToCart }) => {
   const [foods, setFoods] = useState([]);
@@ -7,7 +7,7 @@ const FoodList = ({ addToCart }) => {
 
   useEffect(() => {
     // Fetch data from OMDbAPI
-    fetch("https://www.omdbapi.com/?s=pizza&apikey=YOUR_API_KEY")
+    fetch("https://www.omdbapi.com/?s=pizza&apikey=98e3fb1f")
       .then((response) => response.json())
       .then((data) => {
         setFoods(data.Search || []);
